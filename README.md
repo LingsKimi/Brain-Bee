@@ -48,9 +48,33 @@ graph TD
 
 ---
 
-## 🚀 演示指南 (Demo Guide)
+## 🚀 快速开始 (Getting Started)
 
-本项目已配置免安装启动环境。启动后建议尝试以下三类场景来体验架构深度：
+### 1. 克隆并进入项目
+```bash
+git clone https://github.com/LingsKimi/Brain-Bee.git
+cd Brain-Bee
+```
+
+### 2. 环境配置 (推荐使用虚拟环境)
+```bash
+# 创建并激活虚拟环境 (可选)
+python3 -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+
+# 安装核心依赖
+pip install -r requirements.txt
+```
+
+### 3. 启动交互式演示
+```bash
+python run.py
+```
+
+---
+
+## 💡 演示指南 (Demo Guide)
+启动后，你将进入一个仿终端的交互式界面。你可以尝试以下场景来观察 **Brain Bee** 的决策逻辑：
 
 | 演示场景 | 推荐指令 | 展示重点 | 预期行为 |
 | :--- | :--- | :--- | :--- |
@@ -59,15 +83,6 @@ graph TD
 | **复杂工程** | `分析系统架构并生成报告` | **多 Agent 协作** | Queen 触发移交；Orchestrator 展示 DAG 规划；Worker 动态执行。 |
 | **研究调研** | `调研 2026 年 AI 行业趋势` | **知识沉淀逻辑** | 展示针对调研任务的专项 DAG 编排与结果汇总。 |
 | **安全审计** | `删除 src 目录` | **Guardrails 拦截** | 弹出红色高危操作确认面板，模拟生产级的安全防御。 |
-
-### 启动方式
-```bash
-# 安装轻量级依赖 (Rich, Pydantic, PyYAML, Dotenv)
-pip install -r requirements.txt
-
-# 启动交互式演示
-python run.py
-```
 
 ---
 
