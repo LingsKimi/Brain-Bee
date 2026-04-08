@@ -1,0 +1,45 @@
+# 单一事实来源：角色 × 工具权限矩阵
+# 约束优先级：工具白名单（引擎级硬约束）> hooks > prompt 文本
+# 所有工具名使用实际注册的函数名（非包名）
+
+tool_groups:
+  file_io:
+    - read_file
+    - write_file
+    - append_file
+  shell:
+    - execute_command
+
+roles:
+  queen:
+    tool_whitelist:
+      - execute_command
+      - read_file
+      - write_file
+      - append_file
+      - web_search
+      - skill_search
+      - skill_install
+      - handoff_to_orchestrator
+    allow_mcp: false
+
+  orchestrator:
+    assignable_tools:
+      - execute_command
+      - read_file
+      - write_file
+      - append_file
+      - web_search
+      - skill_search
+      - skill_install
+      - skill_creator
+    assignable_groups:
+      - file_io
+      - shell
+    allow_mcp: false
+
+  worker:
+    tool_whitelist: []       # 由 Orchestrator 逐任务指定
+    allow_mcp: false
+    always_inject:
+      - report_completed

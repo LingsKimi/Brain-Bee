@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.DS_Store
+.env
+*.egg-info/
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+.brain_bee/logs/
+.brain_bee/skills/
+.brain_bee/sessions/

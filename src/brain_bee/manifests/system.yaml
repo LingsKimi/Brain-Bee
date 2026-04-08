@@ -1,0 +1,11 @@
+# 系统级基础设施配置
+system:
+  name: Brain Bee
+  version: "1.0.0"
+
+# 安全底线：所有角色共享的最小安全约束
+constitution:
+  enabled: true
+
+# MCP servers（实际产品按需配置）
+mcp_servers: []
