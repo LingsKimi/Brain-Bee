@@ -58,17 +58,22 @@ cd Brain-Bee
 
 ### 2. 环境配置 (推荐使用虚拟环境)
 ```bash
-# 创建并激活虚拟环境 (可选)
-python3 -m venv .venv
-source .venv/bin/activate  # macOS/Linux
+# 1. 创建虚拟环境
+python3 -m venv .venv        # Linux/macOS
+python -m venv .venv         # Windows
 
-# 安装核心依赖
+# 2. 激活虚拟环境
+source .venv/bin/activate    # Linux/macOS
+.venv\Scripts\activate       # Windows (CMD)
+.venv\Scripts\Activate.ps1   # Windows (PowerShell)
+
+# 3. 安装核心依赖
 pip install -r requirements.txt
 ```
 
 ### 3. 启动交互式演示
 ```bash
-python run.py
+python run.py                # 如果 python3 不可用，请尝试 python
 ```
 
 ---
